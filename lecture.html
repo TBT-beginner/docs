@@ -1,0 +1,673 @@
+<!DOCTYPE html>
+<html lang="ja"> <!-- 初期言語を ja に設定 -->
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title data-lang-key="pageTitle">講義要約：体罰・不適切な指導・ハラスメントの防止に向けて</title>
+    <style>
+        /* Reset and Base Styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Meiryo, 'Hiragino Kaku Gothic ProN', 'Hiragino Sans', sans-serif;
+            line-height: 1.7;
+            background-color: #f8f9fa;
+            color: #333;
+            padding: 20px;
+            padding-top: 70px; /* スイッチャー分のスペース確保 */
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 20px auto;
+            background-color: #ffffff;
+            padding: 30px 40px;
+            border-radius: 12px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+        }
+
+        /* Headings */
+        h1, h2, h3 {
+            color: #1a3d5c; /* Dark blue heading */
+            margin-bottom: 0.8em;
+            padding-bottom: 0.3em;
+        }
+
+        h1 {
+            font-size: 2em;
+            text-align: center;
+            border-bottom: 3px solid #0056b3; /* MEXT-like blue */
+            margin-top: 0;
+            margin-bottom: 1.2em;
+        }
+        /* H1内の講師名spanスタイルは削除 */
+
+        h2 {
+            font-size: 1.6em;
+            border-bottom: 1px solid #b3cde0; /* Light blue underline */
+            margin-top: 1.8em;
+        }
+
+        h3 {
+            font-size: 1.2em;
+            color: #2a4d69; /* Slightly lighter blue */
+            margin-top: 1.5em;
+            border-bottom: none;
+        }
+
+        /* Paragraphs and Lists */
+        p {
+            margin-bottom: 1em;
+            color: #444;
+        }
+
+        ul {
+            list-style-type: disc;
+            margin-left: 1.5em;
+            margin-bottom: 1em;
+        }
+
+        li {
+            margin-bottom: 0.6em;
+        }
+
+        /* Sections and Emphasis */
+        .section {
+            margin-bottom: 2em;
+            padding-bottom: 1.5em;
+            border-bottom: 1px dashed #ced4da;
+        }
+        .section:last-child {
+            border-bottom: none;
+            margin-bottom: 0;
+            padding-bottom: 0;
+        }
+
+        .emphasis-box {
+            background-color: #eaf6fb; /* Light blue background */
+            border-left: 5px solid #2a4d69; /* Dark blue border */
+            padding: 15px 20px;
+            margin: 1.5em 0;
+            border-radius: 8px;
+        }
+        .emphasis-box ul {
+            margin-left: 1em;
+            padding-left: 0;
+            list-style-position: outside;
+        }
+        .emphasis-box li {
+            color: #1a3d5c;
+            font-weight: 500;
+        }
+
+        .warning-box {
+            background-color: #fff3cd; /* Yellow background */
+            border-left: 5px solid #ffb300; /* Yellow border */
+            padding: 15px 20px;
+            margin: 1.5em 0;
+            border-radius: 8px;
+        }
+        .warning-box h2 {
+            color: #856404; /* Dark yellow text */
+            border-bottom: 1px solid #ffeeba;
+            margin-top: 0;
+            font-size: 1.4em;
+        }
+         .warning-box ul {
+             margin-left: 1em;
+             padding-left: 0;
+             list-style-position: outside;
+         }
+        .warning-box li {
+             color: #856404;
+             font-weight: 600;
+         }
+        .warning-box li::marker {
+            color: #ffb300;
+        }
+
+        strong.emphasis-red {
+            color: #c0392b;
+            font-weight: 600;
+        }
+        .case-example {
+             font-style: italic;
+             color: #555;
+             margin-left: 1em;
+             display: block;
+             margin-top: 0.3em;
+        }
+
+        /* Footer/Source Info */
+        .source-info {
+            margin-top: 2em;
+            font-size: 0.9em;
+            color: #6c757d;
+            text-align: right;
+        }
+
+        /* Language Switcher Styles */
+        .lang-switcher {
+          position: fixed;
+          top: 10px;
+          right: 10px;
+          background: white;
+          padding: 5px 10px;
+          border-radius: 5px;
+          box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+          z-index: 1000;
+          border: 1px solid #ccc;
+          display: flex;
+          gap: 5px;
+        }
+        .lang-switcher button {
+          padding: 4px 8px;
+          cursor: pointer;
+          border: 1px solid #ccc;
+          background: #eee;
+          border-radius: 3px;
+          font-size: 0.9em;
+          white-space: nowrap;
+        }
+        .lang-switcher button.active {
+          background: #0056b3;
+          color: white;
+          font-weight: bold;
+          border-color: #0056b3;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            body {
+                padding: 10px;
+                padding-top: 60px;
+            }
+            .container { padding: 20px 25px; }
+            h1 { font-size: 1.7em; }
+            h2 { font-size: 1.4em; }
+            h3 { font-size: 1.1em; }
+            ul, .emphasis-box ul, .warning-box ul {
+                margin-left: 1.2em;
+                padding-left: 0;
+            }
+            .lang-switcher { top: 5px; right: 5px; padding: 3px 5px; }
+            .lang-switcher button { padding: 3px 6px; font-size: 0.85em; }
+        }
+
+        @media (max-width: 480px) {
+             h1 { font-size: 1.5em; }
+             h2 { font-size: 1.3em; }
+             .container { padding: 15px 20px; }
+             .lang-switcher { position: relative; top: auto; right: auto; margin-bottom: 15px; justify-content: center; flex-wrap: wrap; }
+             body { padding-top: 20px; }
+        }
+
+    </style>
+</head>
+<body>
+    <!-- 言語切り替えボタン -->
+    <div class="lang-switcher">
+      <button id="lang-ja" class="active">日本語</button>
+      <button id="lang-en">English</button>
+      <button id="lang-fr">Français</button>
+      <button id="lang-uk">Українська</button>
+    </div>
+
+    <div class="container">
+        <h1 data-lang-key="summaryTitle">
+            講義要約：体罰・不適切な指導・ハラスメントの防止に向けて
+            <!-- 講師名span削除 -->
+        </h1>
+
+        <div class="section">
+            <h2 data-lang-key="introTitle">はじめに：研修の目的</h2>
+            <p data-lang-key="introText1">本日はお忙しい中、研修にご参加いただきありがとうございます。本日は講師として、皆様と共に、体罰、不適切な指導、そしてハラスメントの問題について考え、これらを未然に防ぎ、生徒たちが安心して学べる学校づくりを目指すための知識を共有したいと思います。</p>
+            <p data-lang-key="introText2">教職員の皆様が、これらの問題に関する正しい知識を深め、日々の指導に活かしていただくことが、この研修の最大の目的です。</p>
+        </div>
+
+        <div class="section">
+            <h2 data-lang-key="section1Title">第1部：体罰の絶対禁止と法的責任</h2>
+            <h3 data-lang-key="section1_1Title">1. 体罰とは何か？ - 法的定義と具体例</h3>
+            <ul>
+                <li data-lang-key="section1_1_item1">学校教育法第11条で<strong class="emphasis-red">「ただし、体罰を加えることはできない」</strong>と明確に禁止されています。これは絶対的なルールです。</li>
+                <li data-lang-key="section1_1_item2">「体罰」とは、生徒の身体への侵害（殴る、蹴る、物を投げつける等）や、肉体的苦痛を与える行為（長時間の正座強制、トイレに行かせない等）を指します。文科省の参考資料にあるような、「授業態度が悪いため頬を平手打ちする」「部活動の指示に従わない生徒の頬を殴る」といった行為は、<strong class="emphasis-red">明確な体罰</strong>です。</li>
+                <li data-lang-key="section1_1_item3">一方で、注意、居残り、清掃活動などの「懲戒」や、生徒間の暴力を制止する、危険行為から守るための「正当防衛・正当行為」としての有形力行使は認められますが、その<strong class="emphasis-red">必要性・相当性が厳しく問われます。</strong>安易な判断は禁物です。</li>
+            </ul>
+
+            <h3 data-lang-key="section1_2Title">2. なぜ体罰は絶対に許されないのか？ - 教育的効果の否定と人権侵害</h3>
+            <ul>
+                <li data-lang-key="section1_2_item1">体罰は、生徒の<strong class="emphasis-red">人権を根本から否定する違法行為</strong>であり、教育的効果は一切ありません。</li>
+                <li data-lang-key="section1_2_item2">生徒に深刻な心身の苦痛を与え、PTSDなどの精神疾患を引き起こす可能性もあります。そして何より、<strong class="emphasis-red">教員や学校への信頼関係を完全に破壊</strong>します。</li>
+                <li data-lang-key="section1_2_item3"><strong class="emphasis-red">恐怖による指導は、生徒の自律的な成長を阻害し、むしろ暴力の肯定やいじめの温床</strong>となり得ます。特に閉鎖的になりがちな部活動などでは注意が必要です。</li>
+            </ul>
+
+             <h3 data-lang-key="section1_3Title">3. 法的責任の重大さ - 過去の事例を教訓に</h3> <!-- タイトル修正 -->
+             <p data-lang-key="section1_3_para">体罰を行った場合、教員個人だけでなく学校全体が極めて重い責任を負うことになります。過去の重大事件はその教訓です。</p> <!-- 表現修正 -->
+             <ul>
+                 <li data-lang-key="section1_3_item1"><strong class="emphasis-red">刑事責任：</strong>暴行罪・傷害罪等で逮捕・起訴され、有罪判決（懲役刑等）を受ける可能性があります。<span class="case-example" data-lang-key="case1_criminal">（過去の事件では、顧問教諭が懲役刑・執行猶予付きの有罪判決を受けた例があります）</span></li> <!-- 事例表現修正 -->
+                 <li data-lang-key="section1_3_item2"><strong class="emphasis-red">民事責任：</strong>被害生徒・保護者から高額な損害賠償（治療費、慰謝料等）を請求されます。学校法人も使用者として連帯責任を負います。<span class="case-example" data-lang-key="case1_civil">（過去の事件では、自治体が約8700万円の賠償命令を受け、後に加害教員に求償した例があります）</span></li> <!-- 事例表現修正 -->
+                 <li data-lang-key="section1_3_item3"><strong class="emphasis-red">懲戒処分：</strong>就業規則に基づき、最も重い免職を含む、停職、減給等の処分が下されます。</li>
+                 <li data-lang-key="section1_3_item4"><strong class="emphasis-red">社会的信用の失墜：</strong>保護者・地域からの信頼喪失、マスコミ報道による非難、ネット炎上、そして最悪の場合、教員免許の失効に至る可能性もあります。</li>
+             </ul>
+
+            <h3 data-lang-key="section1_4Title">4. 体罰の現状（近年の調査より）</h3> <!-- タイトル修正 -->
+            <p data-lang-key="section1_4_para">文科省の調査によると、体罰の総数は減少傾向にあるものの、依然として根絶には至っていません。特に以下の点が指摘されています。</p>
+             <ul>
+                 <li data-lang-key="section1_4_item1">発生件数は<strong class="emphasis-red">高等学校が最も多い。</strong></li>
+                 <li data-lang-key="section1_4_item2">加害教員の年齢は<strong class="emphasis-red">50代以上</strong>が多い傾向にある。</li>
+                 <li data-lang-key="section1_4_item3">発生場面は、授業中や<strong class="emphasis-red">部活動指導中（特に高校で最多）</strong>が多い。</li>
+                 <li data-lang-key="section1_4_item4">私立学校の方が、公立学校と比較して発生率が高く、懲戒免職など重い処分が科される傾向が見られます。</li>
+             </ul>
+             <p data-lang-key="section1_4_para2">これらのデータは、私たち自身の学校現場におけるリスクを認識するために重要です。</p>
+        </div>
+
+        <div class="section">
+            <h2 data-lang-key="section2Title">第2部：不適切な指導のリスク - 「言葉の暴力」の深刻さ</h2>
+            <h3 data-lang-key="section2_1Title">1. 体罰だけではない、生徒を追い詰める行為</h3>
+            <p data-lang-key="section2_1_para1">近年、体罰には当たらずとも、生徒の人格を否定するような暴言や、精神的に追い詰める「不適切な指導」が原因で、生徒が不登校になったり、自ら命を絶ったりする悲劇が後を絶ちません。改訂された生徒指導提要でも、この点が強く警告されています。</p>
+            <div class="emphasis-box">
+                <h4 data-lang-key="inappropriateGuidanceExamplesTitle">不適切な指導の具体例：</h4>
+                <ul>
+                    <li data-lang-key="section2_1_boxItem1">感情的に怒鳴りつけたり、威圧的な態度をとったり、物を叩いたり投げたりする行為。</li>
+                    <li data-lang-key="section2_1_boxItem2">生徒の言い分や状況を確認せず、一方的に決めつけて指導する。</li>
+                    <li data-lang-key="section2_1_boxItem3">他の生徒の前で特定の生徒を執拗に叱責するなど、プライバシーや尊厳を傷つける行為。</li>
+                    <li data-lang-key="section2_1_boxItem4">指導した後に生徒を放置したり、必要なフォローや保護者連絡を怠ったりする。</li>
+                    <li data-lang-key="section2_1_boxItem5">「お前なんかいてもいなくても同じだ」など、生徒の人格や存在自体を否定するような暴言。</li>
+                    <li data-lang-key="section2_1_boxItem6">特定の生徒を無視する、必要な情報を意図的に与えない、成績評価や指導でえこひいきする。</li>
+                    <li data-lang-key="section2_1_boxItem7">達成困難な課題を課し、できないことを執拗に責める。</li>
+                </ul>
+            </div>
+             <p data-lang-key="section2_1_para2">これらの行為は、目に見える傷はなくても、生徒の心に深い傷を残し、自信や意欲を根こそぎ奪い、<strong class="emphasis-red">教育活動への参加を困難にし、最悪の結果を招く</strong>危険性があります。</p>
+
+             <h3 data-lang-key="section2_2Title">2. 「指導のつもり」が招く悲劇 - 常に生徒目線で</h3>
+             <p data-lang-key="section2_2_para">教員が「熱心な指導のつもり」「これくらいは当然」と考えている言動が、生徒にとっては耐え難い苦痛や圧力となっている場合があります。<strong class="emphasis-red">自身の指導方法が客観的に見て適切か、生徒の立場に立った時にどう受け止められるか</strong>、常に自問し、振り返ることが極めて重要です。</p>
+        </div>
+
+        <div class="section">
+            <h2 data-lang-key="section3Title">第3部：ハラスメントの理解と防止 - 信頼関係を守るために</h2>
+             <h3 data-lang-key="section3_1Title">1. ハラスメントとは？ - 職場、対生徒双方で注意</h3>
+             <p data-lang-key="section3_1_para">ハラスメントは、地位や関係性の優位性を利用して相手に精神的・肉体的苦痛を与えたり、就業・学習環境を悪化させたりする行為全般を指します。教職員間、そして教員と生徒の間で起こりえます。</p>
+             <ul>
+                 <li data-lang-key="section3_1_item1"><strong class="emphasis-red">セクシャルハラスメント：</strong>相手の意に反する性的な言動。わいせつな話、不必要な身体接触、食事やデートへの執拗な誘い、性的な噂の流布など。生徒に対して指導を口実に二人きりになろうとすることも含まれます。</li>
+                 <li data-lang-key="section3_1_item2"><strong class="emphasis-red">パワーハラスメント：</strong>職務上の地位や権限を利用したいじめ・嫌がらせ。人格否定の暴言、過大な/過小な業務命令、無視・仲間外れ、私的な用事の強制など。</li>
+                 <li data-lang-key="section3_1_item3"><strong class="emphasis-red">その他のハラスメント：</strong>マタニティハラスメント、ジェンダーハラスメント、アカデミックハラスメントなど、様々な形態があります。</li>
+             </ul>
+
+             <h3 data-lang-key="section3_2Title">2. ハラスメントの責任と認識の重要性</h3>
+             <p data-lang-key="section3_2_para1">ハラスメント行為も、内容によっては<strong class="emphasis-red">強制わいせつ罪や名誉毀損罪などの刑事責任、損害賠償を求める民事責任、そして懲戒処分</strong>の対象となります。セクハラ・パワハラは、学校全体の信頼を失墜させる重大な問題です。</p>
+             <p data-lang-key="section3_2_para2"><strong class="emphasis-red">最も重要なのは、「相手がどう感じたか」が基準となる</strong>点です。「冗談のつもりだった」「指導の範囲内だと思った」という加害者側の意図は、言い訳になりません。相手が不快に感じ、尊厳が傷つけられたと認識すれば、それはハラスメントになり得るのです。</p>
+        </div>
+
+        <div class="warning-box">
+            <h2 data-lang-key="warningBoxTitle">教員が常に心得るべき最重要事項 - 「自分ごと」として捉える</h2>
+            <p data-lang-key="warningBoxIntro">体罰・不適切な指導・ハラスメントは、決して他人事ではありません。すべての教職員が「自分ごと」として捉え、以下の点を日々の教育活動において徹底してください。</p>
+            <ul>
+                <li data-lang-key="warningBoxKeyPoint1"><strong class="emphasis-red">人権意識の徹底：</strong> 全ての指導・言動の根底に、生徒一人ひとりの人格と人権を尊重する姿勢を置くこと。これが全ての基本です。</li>
+                <li data-lang-key="warningBoxKeyPoint2"><strong class="emphasis-red">「指導」と「侵害」の境界線を常に意識：</strong> 自身の言動が教育的指導の範囲内か、それとも生徒の人権侵害やハラスメントにあたるかの境界線を、常に厳しい目で自己点検してください。「これくらいなら」「昔は許された」は通用しません。</li>
+                <li data-lang-key="warningBoxKeyPoint3"><strong class="emphasis-red">感情のコントロール（アンガーマネジメント）：</strong> 指導に行き詰まりを感じたり、怒りの感情が湧いたりした時に、決して感情的な言動に走らないこと。一呼吸置く、同僚に相談するなど、冷静さを保つ工夫が必要です。</li>
+                <li data-lang-key="warningBoxKeyPoint4"><strong class="emphasis-red">一人で抱え込まない「チーム学校」としての対応：</strong> 困難な事案や指導に迷う場合は、決して一人で判断せず、必ず学年主任、生徒指導担当、管理職等に報告・相談し、組織として対応策を検討・実行してください。</li>
+                <li data-lang-key="warningBoxKeyPoint5"><strong class="emphasis-red">学び続ける姿勢：</strong> 関連法規、判例、生徒指導提要、社会の価値観は変化します。研修などを通じて常に最新の知識をアップデートし、自身の指導観・人権感覚を問い直し続けることが不可欠です。</li>
+                <li data-lang-key="warningBoxKeyPoint6"><strong class="emphasis-red">「自分は大丈夫」という過信の排除：</strong> 「自分に限ってそんなことはしない」という思い込みが、最も危険です。誰もが当事者になりうるという謙虚な認識を持ち、常に細心の注意を払ってください。</li>
+            </ul>
+            <p style="margin-top: 1em;" data-lang-key="warningBoxConclusion"><strong class="emphasis-red">これらの問題の根絶は、学校全体の最重要課題です。管理職、教職員が一丸となり、風通しの良い職場環境を作り、互いにチェックしあい、予防と早期発見・早期対応に努めましょう。</strong></p>
+        </div>
+
+        <div class="source-info" data-lang-key="sourceInfo">
+            本要約は提供された講義内容に基づき作成されました。
+        </div>
+
+    </div><!-- /.container -->
+
+    <script>
+        // 翻訳テキストの定義
+        const translations = {
+            // --- 日本語 (デフォルト) ---
+            ja: {
+                pageTitle: "講義要約：体罰・不適切な指導・ハラスメントの防止に向けて",
+                summaryTitle: "講義要約：体罰・不適切な指導・ハラスメントの防止に向けて",
+                // lecturerInfo キーは削除
+                introTitle: "はじめに：研修の目的", // 自己紹介文言削除
+                introText1: "本日はお忙しい中、研修にご参加いただきありがとうございます。本日は講師として、皆様と共に、体罰、不適切な指導、そしてハラスメントの問題について考え、これらを未然に防ぎ、生徒たちが安心して学べる学校づくりを目指すための知識を共有したいと思います。", // 氏名・事務所名削除
+                introText2: "教職員の皆様が、これらの問題に関する正しい知識を深め、日々の指導に活かしていただくことが、この研修の最大の目的です。",
+                section1Title: "第1部：体罰の絶対禁止と法的責任",
+                section1_1Title: "1. 体罰とは何か？ - 法的定義と具体例",
+                section1_1_item1: "学校教育法第11条で<strong class=\"emphasis-red\">「ただし、体罰を加えることはできない」</strong>と明確に禁止されています。これは絶対的なルールです。",
+                section1_1_item2: "「体罰」とは、生徒の身体への侵害（殴る、蹴る、物を投げつける等）や、肉体的苦痛を与える行為（長時間の正座強制、トイレに行かせない等）を指します。文科省の参考資料にあるような、「授業態度が悪いため頬を平手打ちする」「部活動の指示に従わない生徒の頬を殴る」といった行為は、<strong class=\"emphasis-red\">明確な体罰</strong>です。",
+                section1_1_item3: "一方で、注意、居残り、清掃活動などの「懲戒」や、生徒間の暴力を制止する、危険行為から守るための「正当防衛・正当行為」としての有形力行使は認められますが、その<strong class=\"emphasis-red\">必要性・相当性が厳しく問われます。</strong>安易な判断は禁物です。",
+                section1_2Title: "2. なぜ体罰は絶対に許されないのか？ - 教育的効果の否定と人権侵害",
+                section1_2_item1: "体罰は、生徒の<strong class=\"emphasis-red\">人権を根本から否定する違法行為</strong>であり、教育的効果は一切ありません。",
+                section1_2_item2: "生徒に深刻な心身の苦痛を与え、PTSDなどの精神疾患を引き起こす可能性もあります。そして何より、<strong class=\"emphasis-red\">教員や学校への信頼関係を完全に破壊</strong>します。",
+                section1_2_item3: "<strong class=\"emphasis-red\">恐怖による指導は、生徒の自律的な成長を阻害し、むしろ暴力の肯定やいじめの温床</strong>となり得ます。特に閉鎖的になりがちな部活動などでは注意が必要です。",
+                section1_3Title: "3. 法的責任の重大さ - 過去の事例を教訓に",
+                section1_3_para: "体罰を行った場合、教員個人だけでなく学校全体が極めて重い責任を負うことになります。過去の重大事件はその教訓です。",
+                section1_3_item1: "<strong class=\"emphasis-red\">刑事責任：</strong>暴行罪・傷害罪等で逮捕・起訴され、有罪判決（懲役刑等）を受ける可能性があります。<span class=\"case-example\">(過去の事件では、顧問教諭が懲役刑・執行猶予付きの有罪判決を受けた例があります）</span>",
+                case1_criminal: "(過去の事件では、顧問教諭が懲役刑・執行猶予付きの有罪判決を受けた例があります）",
+                section1_3_item2: "<strong class=\"emphasis-red\">民事責任：</strong>被害生徒・保護者から高額な損害賠償（治療費、慰謝料等）を請求されます。学校法人も使用者として連帯責任を負います。<span class=\"case-example\">(過去の事件では、自治体が約8700万円の賠償命令を受け、後に加害教員に求償した例があります）</span>",
+                case1_civil: "(過去の事件では、自治体が約8700万円の賠償命令を受け、後に加害教員に求償した例があります）",
+                section1_3_item3: "<strong class=\"emphasis-red\">懲戒処分：</strong>就業規則に基づき、最も重い免職を含む、停職、減給等の処分が下されます。",
+                section1_3_item4: "<strong class=\"emphasis-red\">社会的信用の失墜：</strong>保護者・地域からの信頼喪失、マスコミ報道による非難、ネット炎上、そして最悪の場合、教員免許の失効に至る可能性もあります。",
+                section1_4Title: "4. 体罰の現状（近年の調査より）",
+                section1_4_para: "文科省の調査によると、体罰の総数は減少傾向にあるものの、依然として根絶には至っていません。特に以下の点が指摘されています。",
+                section1_4_item1: "発生件数は<strong class=\"emphasis-red\">高等学校が最も多い。</strong>",
+                section1_4_item2: "加害教員の年齢は<strong class=\"emphasis-red\">50代以上</strong>が多い傾向にある。",
+                section1_4_item3: "発生場面は、授業中や<strong class=\"emphasis-red\">部活動指導中（特に高校で最多）</strong>が多い。",
+                section1_4_item4: "私立学校の方が、公立学校と比較して発生率が高く、懲戒免職など重い処分が科される傾向が見られます。",
+                section1_4_para2: "これらのデータは、私たち自身の学校現場におけるリスクを認識するために重要です。",
+                section2Title: "第2部：不適切な指導のリスク - 「言葉の暴力」の深刻さ",
+                section2_1Title: "1. 体罰だけではない、生徒を追い詰める行為",
+                section2_1_para1: "近年、体罰には当たらずとも、生徒の人格を否定するような暴言や、精神的に追い詰める「不適切な指導」が原因で、生徒が不登校になったり、自ら命を絶ったりする悲劇が後を絶ちません。改訂された生徒指導提要でも、この点が強く警告されています。",
+                inappropriateGuidanceExamplesTitle: "不適切な指導の具体例：",
+                section2_1_boxItem1: "感情的に怒鳴りつけたり、威圧的な態度をとったり、物を叩いたり投げたりする行為。",
+                section2_1_boxItem2: "生徒の言い分や状況を確認せず、一方的に決めつけて指導する。",
+                section2_1_boxItem3: "他の生徒の前で特定の生徒を執拗に叱責するなど、プライバシーや尊厳を傷つける行為。",
+                section2_1_boxItem4: "指導した後に生徒を放置したり、必要なフォローや保護者連絡を怠ったりする。",
+                section2_1_boxItem5: "「お前なんかいてもいなくても同じだ」など、生徒の人格や存在自体を否定するような暴言。",
+                section2_1_boxItem6: "特定の生徒を無視する、必要な情報を意図的に与えない、成績評価や指導でえこひいきする。",
+                section2_1_boxItem7: "達成困難な課題を課し、できないことを執拗に責める。",
+                section2_1_para2: "これらの行為は、目に見える傷はなくても、生徒の心に深い傷を残し、自信や意欲を根こそぎ奪い、<strong class=\"emphasis-red\">教育活動への参加を困難にし、最悪の結果を招く</strong>危険性があります。",
+                section2_2Title: "2. 「指導のつもり」が招く悲劇 - 常に生徒目線で",
+                section2_2_para: "教員が「熱心な指導のつもり」「これくらいは当然」と考えている言動が、生徒にとっては耐え難い苦痛や圧力となっている場合があります。<strong class=\"emphasis-red\">自身の指導方法が客観的に見て適切か、生徒の立場に立った時にどう受け止められるか</strong>、常に自問し、振り返ることが極めて重要です。",
+                section3Title: "第3部：ハラスメントの理解と防止 - 信頼関係を守るために",
+                section3_1Title: "1. ハラスメントとは？ - 職場、対生徒双方で注意",
+                section3_1_para: "ハラスメントは、地位や関係性の優位性を利用して相手に精神的・肉体的苦痛を与えたり、就業・学習環境を悪化させたりする行為全般を指します。教職員間、そして教員と生徒の間で起こりえます。",
+                section3_1_item1: "<strong class=\"emphasis-red\">セクシャルハラスメント：</strong>相手の意に反する性的な言動。わいせつな話、不必要な身体接触、食事やデートへの執拗な誘い、性的な噂の流布など。生徒に対して指導を口実に二人きりになろうとすることも含まれます。",
+                section3_1_item2: "<strong class=\"emphasis-red\">パワーハラスメント：</strong>職務上の地位や権限を利用したいじめ・嫌がらせ。人格否定の暴言、過大な/過小な業務命令、無視・仲間外れ、私的な用事の強制など。",
+                section3_1_item3: "<strong class=\"emphasis-red\">その他のハラスメント：</strong>マタニティハラスメント、ジェンダーハラスメント、アカデミックハラスメントなど、様々な形態があります。",
+                section3_2Title: "2. ハラスメントの責任と認識の重要性",
+                section3_2_para1: "ハラスメント行為も、内容によっては<strong class=\"emphasis-red\">強制わいせつ罪や名誉毀損罪などの刑事責任、損害賠償を求める民事責任、そして懲戒処分</strong>の対象となります。セクハラ・パワハラは、学校全体の信頼を失墜させる重大な問題です。",
+                section3_2_para2: "<strong class=\"emphasis-red\">最も重要なのは、「相手がどう感じたか」が基準となる</strong>点です。「冗談のつもりだった」「指導の範囲内だと思った」という加害者側の意図は、言い訳になりません。相手が不快に感じ、尊厳が傷つけられたと認識すれば、それはハラスメントになり得るのです。",
+                warningBoxTitle: "教員が常に心得るべき最重要事項 - 「自分ごと」として捉える",
+                warningBoxIntro: "体罰・不適切な指導・ハラスメントは、決して他人事ではありません。すべての教職員が「自分ごと」として捉え、以下の点を日々の教育活動において徹底してください。",
+                warningBoxKeyPoint1: "<strong class=\"emphasis-red\">人権意識の徹底：</strong> 全ての指導・言動の根底に、生徒一人ひとりの人格と人権を尊重する姿勢を置くこと。これが全ての基本です。",
+                warningBoxKeyPoint2: "<strong class=\"emphasis-red\">「指導」と「侵害」の境界線を常に意識：</strong> 自身の言動が教育的指導の範囲内か、それとも生徒の人権侵害やハラスメントにあたるかの境界線を、常に厳しい目で自己点検してください。「これくらいなら」「昔は許された」は通用しません。",
+                warningBoxKeyPoint3: "<strong class=\"emphasis-red\">感情のコントロール（アンガーマネジメント）：</strong> 指導に行き詰まりを感じたり、怒りの感情が湧いたりした時に、決して感情的な言動に走らないこと。一呼吸置く、同僚に相談するなど、冷静さを保つ工夫が必要です。",
+                warningBoxKeyPoint4: "<strong class=\"emphasis-red\">一人で抱え込まない「チーム学校」としての対応：</strong> 困難な事案や指導に迷う場合は、決して一人で判断せず、必ず学年主任、生徒指導担当、管理職等に報告・相談し、組織として対応策を検討・実行してください。",
+                warningBoxKeyPoint5: "<strong class=\"emphasis-red\">学び続ける姿勢：</strong> 関連法規、判例、生徒指導提要、社会の価値観は変化します。研修などを通じて常に最新の知識をアップデートし、自身の指導観・人権感覚を問い直し続けることが不可欠です。",
+                warningBoxKeyPoint6: "<strong class=\"emphasis-red\">「自分は大丈夫」という過信の排除：</strong> 「自分に限ってそんなことはしない」という思い込みが、最も危険です。誰もが当事者になりうるという謙虚な認識を持ち、常に細心の注意を払ってください。",
+                warningBoxConclusion: "<strong class=\"emphasis-red\">これらの問題の根絶は、学校全体の最重要課題です。管理職、教職員が一丸となり、風通しの良い職場環境を作り、互いにチェックしあい、予防と早期発見・早期対応に努めましょう。</strong>",
+                sourceInfo: "本要約は提供された講義内容に基づき作成されました。" // 氏名削除
+            },
+            // --- English ---
+            en: {
+                pageTitle: "Lecture Summary: Preventing Corporal Punishment, Inappropriate Guidance, and Harassment", // Attorney name removed
+                summaryTitle: "Lecture Summary: Preventing Corporal Punishment, Inappropriate Guidance, and Harassment", // Attorney name removed
+                // lecturerInfo key removed
+                introTitle: "Introduction: Training Purpose", // Self-introduction removed
+                introText1: "Thank you for participating in this training despite your busy schedules. Today, as the lecturer, I would like to think together with you about the issues of corporal punishment, inappropriate guidance, and harassment, and share knowledge aimed at preventing these problems and creating a school where students can learn with peace of mind.", // Name/Firm removed
+                introText2: "The primary goal of this training is for all faculty and staff to deepen their correct understanding of these issues and apply it to their daily guidance.",
+                section1Title: "Part 1: Absolute Prohibition of Corporal Punishment and Legal Responsibility",
+                section1_1Title: "1. What is Corporal Punishment? - Legal Definition and Specific Examples",
+                section1_1_item1: "It is explicitly prohibited by Article 11 of the School Education Act, stating <strong class=\"emphasis-red\">'However, corporal punishment may not be inflicted.'</strong> This is an absolute rule.",
+                section1_1_item2: "Corporal punishment refers to acts infringing on a student's body (hitting, kicking, throwing objects, etc.) or causing physical pain (forcing prolonged seiza, denying toilet access, etc.). Actions like 'slapping the cheek of a student for poor classroom attitude' or 'punching the cheek of a student who disobeyed club instructions,' as listed in MEXT's reference materials, are <strong class=\"emphasis-red\">clear corporal punishment</strong>.",
+                section1_1_item3: "On the other hand, 'disciplinary actions' like warnings, detention, or cleaning duties, and the use of physical force as 'justifiable self-defense/acts' to stop violence between students or protect from danger are permissible, but their <strong class=\"emphasis-red\">necessity and appropriateness are strictly evaluated.</strong> Easy judgment is forbidden.",
+                section1_2Title: "2. Why is Corporal Punishment Absolutely Unacceptable? - Denial of Educational Effect and Human Rights Violation",
+                section1_2_item1: "Corporal punishment is an <strong class=\"emphasis-red\">illegal act that fundamentally denies student human rights</strong> and has absolutely no educational effect.",
+                section1_2_item2: "It can cause severe physical and mental distress, potentially leading to mental disorders like PTSD. Most importantly, it <strong class=\"emphasis-red\">completely destroys the relationship of trust</strong> with teachers and the school.",
+                section1_2_item3: "<strong class=\"emphasis-red\">Guidance through fear hinders students' autonomous growth and, instead, fosters an affirmation of violence and a breeding ground for bullying.</strong> Particular caution is needed in potentially closed environments like club activities.",
+                section1_3Title: "3. Severity of Legal Responsibility - Learning from Past Cases", // Title modified
+                section1_3_para: "When corporal punishment occurs, not only the individual teacher but the entire school bears extremely heavy responsibility. Major past incidents serve as lessons.", // Wording modified
+                section1_3_item1: "<strong class=\"emphasis-red\">Criminal Liability:</strong> Possibility of arrest, prosecution for assault/battery, and conviction (imprisonment, etc.).<span class=\"case-example\">(In past cases, advisor teachers have received suspended prison sentences for convictions)</span>", // Case example modified
+                case1_criminal: "(In past cases, advisor teachers have received suspended prison sentences for convictions)",
+                section1_3_item2: "<strong class=\"emphasis-red\">Civil Liability:</strong> High-value damage claims (medical fees, consolation money, etc.) from the victim student/parents. The school corporation also bears joint liability as the employer.<span class=\"case-example\">(In past cases, municipalities were ordered to pay approx. 87 million yen in damages and later sought contribution from the perpetrating teacher)</span>", // Case example modified
+                case1_civil: "(In past cases, municipalities were ordered to pay approx. 87 million yen in damages and later sought contribution from the perpetrating teacher)",
+                section1_3_item3: "<strong class=\"emphasis-red\">Disciplinary Action:</strong> Based on work regulations,処分 including dismissal (the most severe), suspension, or salary reduction.",
+                section1_3_item4: "<strong class=\"emphasis-red\">Loss of Social Trust:</strong> Loss of trust from parents/community, criticism via media coverage, online 'flaming', and potentially, revocation of the teaching license.",
+                section1_4Title: "4. Current Situation of Corporal Punishment (From Recent Surveys)", // Title modified
+                section1_4_para: "According to MEXT surveys, although the total number of corporal punishment cases is decreasing, it has not yet been eradicated. The following points are particularly noted:",
+                section1_4_item1: "The number of incidents is <strong class=\"emphasis-red\">highest in high schools.</strong>",
+                section1_4_item2: "Perpetrating teachers tend to be <strong class=\"emphasis-red\">in their 50s or older</strong>.",
+                section1_4_item3: "Incidents often occur during classes or <strong class=\"emphasis-red\">club activity guidance (especially highest in high schools)</strong>.",
+                section1_4_item4: "Private schools tend to have a higher incidence rate compared to public schools, and tend to impose severe disciplinary actions like dismissal.",
+                section1_4_para2: "This data is important for recognizing the risks within our own school environment.",
+                section2Title: "Part 2: Risks of Inappropriate Guidance - The Severity of 'Verbal Abuse'",
+                section2_1Title: "1. Actions That Corner Students, Not Just Corporal Punishment",
+                section2_1_para1: "In recent years, tragedies where students become truant or take their own lives due to 'inappropriate guidance'—such as verbal abuse denying personality or mentally cornering them, even if not amounting to corporal punishment—are ceaseless. The revised Student Guidance Handbook strongly warns against this.",
+                inappropriateGuidanceExamplesTitle: "Specific Examples of Inappropriate Guidance:",
+                section2_1_boxItem1: "Yelling emotionally, adopting an intimidating attitude, hitting or throwing objects.",
+                section2_1_boxItem2: "Guiding unilaterally based on assumptions without confirming the student's side or the situation.",
+                section2_1_boxItem3: "Actions that damage privacy or dignity, like persistently reprimanding a specific student in front of others.",
+                section2_1_boxItem4: "Leaving a student alone after guidance, or neglecting necessary follow-up or parent contact.",
+                section2_1_boxItem5: "Verbal abuse denying the student's personality or very existence, like 'It doesn't matter if you're here or not.'",
+                section2_1_boxItem6: "Ignoring a specific student, intentionally withholding necessary information, showing favoritism in grading or guidance.",
+                section2_1_boxItem7: "Assigning excessively difficult tasks and persistently blaming for inability to complete them.",
+                section2_1_para2: "Even without visible wounds, these acts leave deep scars on a student's mind, completely rob them of confidence and motivation, <strong class=\"emphasis-red\">make participation in educational activities difficult, and risk leading to the worst outcomes</strong>.",
+                section2_2Title: "2. Tragedies Caused by 'Intention of Guidance' - Always from the Student's Perspective",
+                section2_2_para: "Actions a teacher considers 'enthusiastic guidance' or 'only natural' might be unbearable pain or pressure for the student. It is crucial to always question and reflect: <strong class=\"emphasis-red\">Is my guidance method appropriate from an objective standpoint? How would it be perceived from the student's position?</strong>",
+                section3Title: "Part 3: Understanding and Preventing Harassment - Protecting Trust Relationships",
+                section3_1Title: "1. What is Harassment? - Caution Needed Both in the Workplace and Towards Students",
+                section3_1_para: "Harassment generally refers to any behavior that uses positional or relational superiority to cause mental/physical distress or worsen the working/learning environment. It can occur between faculty/staff and between teachers and students.",
+                section3_1_item1: "<strong class=\"emphasis-red\">Sexual Harassment:</strong> Unwanted sexual words or actions. Lewd talk, unnecessary physical contact, persistent invitations for meals or dates, spreading sexual rumors, etc. Includes trying to be alone with a student under the pretext of guidance.",
+                section3_1_item2: "<strong class=\"emphasis-red\">Power Harassment:</strong> Bullying/harassment using job status or authority. Personality-denying verbal abuse, excessive/minimal work orders, ignoring/ostracizing, forcing personal errands, etc.",
+                section3_1_item3: "<strong class=\"emphasis-red\">Other Harassment:</strong> Various forms exist, such as maternity harassment, gender harassment, academic harassment, etc.",
+                section3_2Title: "2. Responsibility for Harassment and Importance of Recognition",
+                section3_2_para1: "Depending on the content, harassment can also lead to <strong class=\"emphasis-red\">criminal charges like indecent assault or defamation, civil liability for damages, and disciplinary action</strong>. Sexual and power harassment are serious issues that cause the entire school to lose trust.",
+                section3_2_para2: "<strong class=\"emphasis-red\">The most critical point is that the standard is 'how the recipient felt.'</strong> The perpetrator's intent—'I meant it as a joke,' 'I thought it was within the scope of guidance'—is no excuse. If the recipient felt uncomfortable and their dignity was harmed, it can constitute harassment.",
+                warningBoxTitle: "Most Important Matters for Teachers to Always Keep in Mind - Taking it 'Personally'",
+                warningBoxIntro: "Corporal punishment, inappropriate guidance, and harassment are never someone else's problem. All faculty and staff must treat this as 'their own issue' and thoroughly implement the following in daily educational activities:",
+                warningBoxKeyPoint1: "<strong class=\"emphasis-red\">Thorough Human Rights Awareness:</strong> Place respect for each student's personality and human rights at the foundation of all guidance and actions. This is the basis for everything.",
+                warningBoxKeyPoint2: "<strong class=\"emphasis-red\">Constantly Mind the Boundary Between 'Guidance' and 'Infringement':</strong> Always self-check with a critical eye whether your words and actions are within the scope of educational guidance or constitute student human rights violations or harassment. 'This much is okay' or 'It was allowed in the past' are unacceptable.",
+                warningBoxKeyPoint3: "<strong class=\"emphasis-red\">Emotional Control (Anger Management):</strong> When feeling stuck in guidance or experiencing anger, never resort to emotional words or actions. Taking a breath, consulting colleagues—efforts to maintain composure are necessary.",
+                warningBoxKeyPoint4: "<strong class=\"emphasis-red\">Don't Bear it Alone - Respond as 'Team School':</strong> In difficult cases or when unsure about guidance, never judge alone. Always report/consult with grade level leaders, student guidance counselors, administrators, etc., and consider/implement responses as an organization.",
+                warningBoxKeyPoint5: "<strong class=\"emphasis-red\">Attitude of Continuous Learning:</strong> Relevant laws, court precedents, the Student Guidance Handbook, and societal values change. It's essential to constantly update knowledge through training, etc., and keep re-evaluating your own views on guidance and human rights.",
+                warningBoxKeyPoint6: "<strong class=\"emphasis-red\">Eliminate Overconfidence of 'I'm Okay':</strong> The thought 'It wouldn't happen to me' is the most dangerous. Maintain the humble recognition that anyone can become involved and always pay meticulous attention.",
+                warningBoxConclusion: "<strong class=\"emphasis-red\">Eradicating these problems is the school's top priority. Administrators and faculty must unite, create an open work environment, check each other, and strive for prevention, early detection, and early response.</strong>",
+                sourceInfo: "This summary was created based on the provided lecture content." // Name removed
+            },
+            // --- Français ---
+            fr: {
+                pageTitle: "Résumé de la conférence : Prévention des châtiments corporels, conseils inappropriés et harcèlement", // Nom avocat supprimé
+                summaryTitle: "Résumé de la conférence : Prévention des châtiments corporels, conseils inappropriés et harcèlement", // Nom avocat supprimé
+                // lecturerInfo key removed
+                introTitle: "Introduction : Objectif de la formation", // Présentation supprimée
+                introText1: "Merci de participer à cette formation malgré vos emplois du temps chargés. Aujourd'hui, en tant que conférencier, je souhaite réfléchir avec vous aux problèmes des châtiments corporels, des conseils inappropriés et du harcèlement, et partager des connaissances visant à prévenir ces problèmes et à créer une école où les élèves peuvent apprendre en toute sérénité.", // Nom/Cabinet supprimés
+                introText2: "L'objectif principal de cette formation est que tous les membres du corps enseignant et du personnel approfondissent leur compréhension correcte de ces questions et l'appliquent dans leur accompagnement quotidien.",
+                section1Title: "Partie 1 : Interdiction absolue des châtiments corporels et responsabilité légale",
+                section1_1Title: "1. Qu'est-ce qu'un châtiment corporel ? - Définition légale et exemples concrets",
+                section1_1_item1: "L'article 11 de la loi sur l'éducation scolaire l'interdit explicitement en stipulant <strong class=\"emphasis-red\">'Cependant, aucun châtiment corporel ne peut être infligé.'</strong> C'est une règle absolue.",
+                section1_1_item2: "Le châtiment corporel désigne les actes portant atteinte à l'intégrité physique d'un élève (frapper, donner des coups de pied, jeter des objets, etc.) ou causant une douleur physique (forcer à rester assis en seiza longtemps, interdire d'aller aux toilettes, etc.). Des actions comme 'gifler un élève pour mauvaise attitude en classe' ou 'frapper la joue d'un élève qui n'a pas suivi les instructions du club', citées dans les documents de référence du MEXT, sont des <strong class=\"emphasis-red\">châtiments corporels manifestes</strong>.",
+                section1_1_item3: "D'un autre côté, les 'mesures disciplinaires' comme les avertissements, retenues ou tâches de nettoyage, et l'usage de la force physique en tant que 'légitime défense/acte justifiable' pour arrêter la violence entre élèves ou protéger d'un danger sont permis, mais leur <strong class=\"emphasis-red\">nécessité et leur caractère approprié sont strictement évalués.</strong> Tout jugement hâtif est interdit.",
+                section1_2Title: "2. Pourquoi les châtiments corporels sont-ils absolument inacceptables ? - Négation de l'effet éducatif et violation des droits de l'homme",
+                section1_2_item1: "Le châtiment corporel est un <strong class=\"emphasis-red\">acte illégal qui nie fondamentalement les droits de l'homme des élèves</strong> et n'a absolument aucun effet éducatif.",
+                section1_2_item2: "Il peut causer une grave détresse physique et mentale, pouvant entraîner des troubles mentaux comme le TSPT. Plus important encore, il <strong class=\"emphasis-red\">détruit complètement la relation de confiance</strong> avec les enseignants et l'école.",
+                section1_2_item3: "<strong class=\"emphasis-red\">L'accompagnement par la peur entrave la croissance autonome des élèves et favorise au contraire une affirmation de la violence et un terreau fertile pour le harcèlement.</strong> Une prudence particulière est requise dans les environnements potentiellement fermés comme les activités de club.",
+                section1_3Title: "3. Gravité de la responsabilité légale - Tirer les leçons des affaires passées", // Titre modifié
+                section1_3_para: "Lorsqu'un châtiment corporel a lieu, non seulement l'enseignant individuel mais toute l'école porte une responsabilité extrêmement lourde. Les incidents graves passés servent de leçon.", // Formulation modifiée
+                section1_3_item1: "<strong class=\"emphasis-red\">Responsabilité pénale :</strong> Possibilité d'arrestation, de poursuites pour voies de fait/coups et blessures, et de condamnation (emprisonnement, etc.).<span class=\"case-example\">(Dans des affaires passées, des enseignants conseillers ont été condamnés à des peines de prison avec sursis)</span>", // Exemple modifié
+                case1_criminal: "(Dans des affaires passées, des enseignants conseillers ont été condamnés à des peines de prison avec sursis)",
+                section1_3_item2: "<strong class=\"emphasis-red\">Responsabilité civile :</strong> Demandes de dommages-intérêts élevés (frais médicaux, indemnité de consolation, etc.) de la part de l'élève victime/parents. La société scolaire porte également une responsabilité solidaire en tant qu'employeur.<span class=\"case-example\">(Dans des affaires passées, des municipalités ont été condamnées à payer environ 87 millions de yens de dommages et ont ensuite demandé une contribution à l'enseignant auteur)</span>", // Exemple modifié
+                case1_civil: "(Dans des affaires passées, des municipalités ont été condamnées à payer environ 87 millions de yens de dommages et ont ensuite demandé une contribution à l'enseignant auteur)",
+                section1_3_item3: "<strong class=\"emphasis-red\">Sanction disciplinaire :</strong> Sur la base du règlement intérieur, sanctions incluant la révocation (la plus sévère), la suspension ou la réduction de salaire.",
+                section1_3_item4: "<strong class=\"emphasis-red\">Perte de confiance sociale :</strong> Perte de confiance des parents/communauté, critiques via la couverture médiatique, 'flaming' en ligne, et potentiellement, révocation du permis d'enseigner.",
+                section1_4Title: "4. Situation actuelle des châtiments corporels (D'après les enquêtes récentes)", // Titre modifié
+                section1_4_para: "Selon les enquêtes du MEXT, bien que le nombre total de cas de châtiments corporels diminue, il n'a pas encore été éradiqué. Les points suivants sont particulièrement relevés :",
+                section1_4_item1: "Le nombre d'incidents est <strong class=\"emphasis-red\">le plus élevé dans les lycées.</strong>",
+                section1_4_item2: "Les enseignants auteurs ont tendance à avoir <strong class=\"emphasis-red\">50 ans ou plus</strong>.",
+                section1_4_item3: "Les incidents surviennent souvent pendant les cours ou <strong class=\"emphasis-red\">l'encadrement des activités de club (surtout le plus élevé dans les lycées)</strong>.",
+                section1_4_item4: "Les écoles privées ont tendance à avoir un taux d'incidence plus élevé que les écoles publiques, et tendent à imposer des sanctions disciplinaires sévères comme la révocation.",
+                section1_4_para2: "Ces données sont importantes pour reconnaître les risques dans notre propre environnement scolaire.",
+                section2Title: "Partie 2 : Risques des conseils inappropriés - La gravité de la 'violence verbale'",
+                section2_1Title: "1. Actions qui acculent les élèves, pas seulement les châtiments corporels",
+                section2_1_para1: "Ces dernières années, les tragédies où des élèves deviennent absentéistes ou se suicident à cause de 'conseils inappropriés' — comme des abus verbaux niant la personnalité ou les acculant mentalement, même s'ils n'équivalent pas à des châtiments corporels — sont incessantes. Le manuel révisé d'orientation des élèves met fortement en garde contre cela.",
+                inappropriateGuidanceExamplesTitle: "Exemples concrets de conseils inappropriés :",
+                section2_1_boxItem1: "Crier avec émotion, adopter une attitude intimidante, frapper ou jeter des objets.",
+                section2_1_boxItem2: "Guider unilatéralement sur la base d'hypothèses sans confirmer la version de l'élève ou la situation.",
+                section2_1_boxItem3: "Actions qui portent atteinte à la vie privée ou à la dignité, comme réprimander avec persistance un élève spécifique devant les autres.",
+                section2_1_boxItem4: "Laisser un élève seul après les conseils, ou négliger le suivi nécessaire ou le contact avec les parents.",
+                section2_1_boxItem5: "Abus verbal niant la personnalité ou l'existence même de l'élève, comme 'Peu importe que tu sois là ou non.'",
+                section2_1_boxItem6: "Ignorer un élève spécifique, retenir intentionnellement des informations nécessaires, faire preuve de favoritisme dans la notation ou les conseils.",
+                section2_1_boxItem7: "Assigner des tâches excessivement difficiles et blâmer avec persistance pour l'incapacité à les accomplir.",
+                section2_1_para2: "Même sans blessures visibles, ces actes laissent de profondes cicatrices dans l'esprit d'un élève, lui enlèvent complètement confiance et motivation, <strong class=\"emphasis-red\">rendent difficile la participation aux activités éducatives et risquent d'entraîner les pires issues</strong>.",
+                section2_2Title: "2. Tragédies causées par 'l'intention de guider' - Toujours du point de vue de l'élève",
+                section2_2_para: "Les actions qu'un enseignant considère comme des 'conseils enthousiastes' ou 'tout naturels' peuvent être une douleur ou une pression insupportable pour l'élève. Il est crucial de toujours se questionner et réfléchir : <strong class=\"emphasis-red\">Ma méthode de conseil est-elle appropriée d'un point de vue objectif ? Comment serait-elle perçue du point de vue de l'élève ?</strong>",
+                section3Title: "Partie 3 : Compréhension et prévention du harcèlement - Protéger les relations de confiance",
+                section3_1Title: "1. Qu'est-ce que le harcèlement ? - Prudence requise tant sur le lieu de travail qu'envers les élèves",
+                section3_1_para: "Le harcèlement désigne généralement tout comportement qui utilise une supériorité de position ou relationnelle pour causer une détresse mentale/physique ou détériorer l'environnement de travail/d'apprentissage. Il peut survenir entre membres du corps enseignant/personnel et entre enseignants et élèves.",
+                section3_1_item1: "<strong class=\"emphasis-red\">Harcèlement sexuel :</strong> Paroles ou actes sexuels non désirés. Propos obscènes, contacts physiques inutiles, invitations persistantes à des repas ou rendez-vous, diffusion de rumeurs sexuelles, etc. Inclut le fait d'essayer d'être seul avec un élève sous prétexte de conseils.",
+                section3_1_item2: "<strong class=\"emphasis-red\">Harcèlement moral (Power Harassment) :</strong> Intimidation/harcèlement utilisant le statut ou l'autorité professionnelle. Abus verbal niant la personnalité, ordres de travail excessifs/minimaux, ignorance/ostracisme, contrainte à effectuer des tâches personnelles, etc.",
+                section3_1_item3: "<strong class=\"emphasis-red\">Autres harcèlements :</strong> Diverses formes existent, comme le harcèlement lié à la maternité, le harcèlement de genre, le harcèlement académique, etc.",
+                section3_2Title: "2. Responsabilité en matière de harcèlement et importance de la reconnaissance",
+                section3_2_para1: "Selon le contenu, le harcèlement peut également entraîner des <strong class=\"emphasis-red\">poursuites pénales comme l'agression sexuelle ou la diffamation, une responsabilité civile pour dommages-intérêts et des sanctions disciplinaires</strong>. Le harcèlement sexuel et moral sont des problèmes graves qui font perdre toute confiance à l'école.",
+                section3_2_para2: "<strong class=\"emphasis-red\">Le point le plus critique est que la norme est 'comment le destinataire s'est senti'.</strong> L'intention de l'auteur — 'Je le disais en plaisantant,' 'Je pensais que c'était dans le cadre des conseils' — n'est pas une excuse. Si le destinataire s'est senti mal à l'aise et que sa dignité a été atteinte, cela peut constituer du harcèlement.",
+                warningBoxTitle: "Questions les plus importantes que les enseignants doivent toujours garder à l'esprit - Le prendre 'Personnellement'",
+                warningBoxIntro: "Les châtiments corporels, les conseils inappropriés et le harcèlement ne sont jamais le problème de quelqu'un d'autre. Tous les membres du corps enseignant et du personnel doivent traiter cela comme 'leur propre problème' et mettre en œuvre rigoureusement ce qui suit dans les activités éducatives quotidiennes :",
+                warningBoxKeyPoint1: "<strong class=\"emphasis-red\">Sensibilisation approfondie aux droits de l'homme :</strong> Placer le respect de la personnalité et des droits de l'homme de chaque élève au fondement de tous les conseils et actions. C'est la base de tout.",
+                warningBoxKeyPoint2: "<strong class=\"emphasis-red\">Toujours garder à l'esprit la frontière entre 'conseils' et 'atteinte' :</strong> Toujours vérifier d'un œil critique si vos paroles et actions sont dans le cadre des conseils éducatifs ou constituent des violations des droits de l'homme des élèves ou du harcèlement. 'Ce n'est pas si grave' ou 'C'était permis avant' sont inacceptables.",
+                warningBoxKeyPoint3: "<strong class=\"emphasis-red\">Contrôle émotionnel (Gestion de la colère) :</strong> Lorsque vous vous sentez bloqué dans les conseils ou que la colère monte, ne recourez jamais à des paroles ou actions émotionnelles. Prendre une respiration, consulter des collègues — des efforts pour garder son calme sont nécessaires.",
+                warningBoxKeyPoint4: "<strong class=\"emphasis-red\">Ne pas le porter seul - Répondre en tant qu''École Équipe' :</strong> Dans les cas difficiles ou en cas d'incertitude sur les conseils, ne jugez jamais seul. Signalez/consultez toujours les responsables de niveau, les conseillers d'orientation, les administrateurs, etc., et envisagez/mettez en œuvre des réponses en tant qu'organisation.",
+                warningBoxKeyPoint5: "<strong class=\"emphasis-red\">Attitude d'apprentissage continu :</strong> Les lois pertinentes, la jurisprudence, le manuel d'orientation des élèves et les valeurs sociétales changent. Il est essentiel de mettre constamment à jour ses connaissances par la formation, etc., et de continuer à réévaluer ses propres vues sur les conseils et les droits de l'homme.",
+                warningBoxKeyPoint6: "<strong class=\"emphasis-red\">Éliminer l'excès de confiance de 'Je vais bien' :</strong> La pensée 'Ça ne m'arriverait pas' est la plus dangereuse. Maintenez la reconnaissance humble que n'importe qui peut être impliqué et soyez toujours extrêmement attentif.",
+                warningBoxConclusion: "<strong class=\"emphasis-red\">L'éradication de ces problèmes est la priorité absolue de l'école. Les administrateurs et le corps enseignant doivent s'unir, créer un environnement de travail ouvert, se contrôler mutuellement et s'efforcer de prévenir, de détecter tôt et de répondre rapidement.</strong>",
+                sourceInfo: "Ce résumé a été créé sur la base du contenu de la conférence fournie." // Nom supprimé
+            },
+            // --- Українська ---
+            uk: {
+                pageTitle: "Підсумок лекції: Запобігання тілесним покаранням, неналежному керівництву та домаганням", // Ім'я адвоката видалено
+                summaryTitle: "Підсумок лекції: Запобігання тілесним покаранням, неналежному керівництву та домаганням", // Ім'я адвоката видалено
+                // lecturerInfo key removed
+                introTitle: "Вступ: Мета навчання", // Самопредставлення видалено
+                introText1: "Дякую, що приєдналися до цього навчання, незважаючи на вашу зайнятість. Сьогодні, як лектор, я хотів би разом з вами поміркувати над проблемами тілесних покарань, неналежного керівництва та домагань, а також поділитися знаннями, спрямованими на запобігання цим проблемам та створення школи, де учні можуть спокійно навчатися.", // Ім'я/Фірма видалені
+                introText2: "Основна мета цього навчання полягає в тому, щоб усі викладачі та співробітники поглибили свої правильні знання щодо цих питань та застосовували їх у щоденному керівництві.",
+                section1Title: "Частина 1: Абсолютна заборона тілесних покарань та юридична відповідальність",
+                section1_1Title: "1. Що таке тілесне покарання? - Юридичне визначення та конкретні приклади",
+                section1_1_item1: "Стаття 11 Закону про шкільну освіту чітко забороняє це, стверджуючи <strong class=\"emphasis-red\">'Однак тілесні покарання не можуть застосовуватися.'</strong> Це абсолютне правило.",
+                section1_1_item2: "Тілесне покарання означає дії, що посягають на тіло учня (побиття, копання, кидання предметів тощо) або спричиняють фізичний біль (примус до тривалого сидіння в сейдза, заборона відвідування туалету тощо). Дії на кшталт 'нанесення ляпаса по щоці учня за погану поведінку в класі' або 'удар кулаком по щоці учня, який не послухався вказівок клубу', як зазначено в довідкових матеріалах МОНМС, є <strong class=\"emphasis-red\">однозначним тілесним покаранням</strong>.",
+                section1_1_item3: "З іншого боку, 'дисциплінарні стягнення', такі як зауваження, залишення після уроків або прибирання, та застосування фізичної сили як 'виправдана самооборона/дії' для припинення насильства між учнями або захисту від небезпеки є допустимими, але їх <strong class=\"emphasis-red\">необхідність та доцільність суворо оцінюються.</strong> Поспішне судження заборонено.",
+                section1_2Title: "2. Чому тілесні покарання абсолютно неприпустимі? - Заперечення освітнього ефекту та порушення прав людини",
+                section1_2_item1: "Тілесне покарання - це <strong class=\"emphasis-red\">незаконний акт, що фундаментально заперечує права людини учнів</strong> і абсолютно не має освітнього ефекту.",
+                section1_2_item2: "Він може спричинити серйозні фізичні та психічні страждання, потенційно призводячи до психічних розладів, таких як ПТСР. Найважливіше, він <strong class=\"emphasis-red\">повністю руйнує відносини довіри</strong> з вчителями та школою.",
+                section1_2_item3: "<strong class=\"emphasis-red\">Керівництво через страх перешкоджає автономному зростанню учнів і, навпаки, сприяє утвердженню насильства та створенню сприятливого середовища для знущань.</strong> Особлива обережність потрібна в потенційно закритих середовищах, таких як клубні заходи.",
+                section1_3Title: "3. Тяжкість юридичної відповідальності - Навчання на минулих випадках", // Назва змінена
+                section1_3_para: "Коли відбувається тілесне покарання, надзвичайно важку відповідальність несе не лише окремий вчитель, а й уся школа. Великі минулі інциденти служать уроками.", // Формулювання змінене
+                section1_3_item1: "<strong class=\"emphasis-red\">Кримінальна відповідальність:</strong> Можливість арешту, кримінального переслідування за напад/побої та засудження (позбавлення волі тощо).<span class=\"case-example\">(У минулих випадках вчителі-радники отримували умовні тюремні терміни за вироками)</span>", // Приклад змінено
+                case1_criminal: "(У минулих випадках вчителі-радники отримували умовні тюремні терміни за вироками)",
+                section1_3_item2: "<strong class=\"emphasis-red\">Цивільна відповідальність:</strong> Високі позови про відшкодування збитків (медичні витрати, моральна шкода тощо) від учня-жертви/батьків. Шкільна корпорація також несе солідарну відповідальність як роботодавець.<span class=\"case-example\">(У минулих випадках муніципалітетам наказували виплатити приблизно 87 млн єн збитків, а потім вони вимагали відшкодування від вчителя-правопорушника)</span>", // Приклад змінено
+                case1_civil: "(У минулих випадках муніципалітетам наказували виплатити приблизно 87 млн єн збитків, а потім вони вимагали відшкодування від вчителя-правопорушника)",
+                section1_3_item3: "<strong class=\"emphasis-red\">Дисциплінарне стягнення:</strong> На підставі правил внутрішнього розпорядку, покарання, включаючи звільнення (найсуворіше), відсторонення або зниження заробітної плати.",
+                section1_3_item4: "<strong class=\"emphasis-red\">Втрата суспільної довіри:</strong> Втрата довіри з боку батьків/громади, критика через висвітлення у ЗМІ, онлайн-'флеймінг', і потенційно, позбавлення ліцензії на викладання.",
+                section1_4Title: "4. Поточна ситуація з тілесними покараннями (З останніх опитувань)", // Назва змінена
+                section1_4_para: "Згідно з опитуваннями МОНМС, хоча загальна кількість випадків тілесних покарань зменшується, вони ще не викорінені. Особливо відзначаються такі моменти:",
+                section1_4_item1: "Кількість інцидентів є <strong class=\"emphasis-red\">найвищою у старших школах.</strong>",
+                section1_4_item2: "Вчителі-правопорушники, як правило, <strong class=\"emphasis-red\">у віці 50 років і старше</strong>.",
+                section1_4_item3: "Інциденти часто трапляються під час уроків або <strong class=\"emphasis-red\">керівництва клубною діяльністю (особливо найвища частота у старших школах)</strong>.",
+                section1_4_item4: "Приватні школи, як правило, мають вищий рівень поширеності порівняно з державними школами, і схильні застосовувати суворі дисциплінарні стягнення, такі як звільнення.",
+                section1_4_para2: "Ці дані важливі для усвідомлення ризиків у нашому власному шкільному середовищі.",
+                section2Title: "Частина 2: Ризики неналежного керівництва - Серйозність 'словесного насильства'",
+                section2_1Title: "1. Дії, що заганяють учнів у кут, не лише тілесні покарання",
+                section2_1_para1: "Останніми роками не припиняються трагедії, коли учні починають прогулювати школу або накладають на себе руки через 'неналежне керівництво' — таке як словесні образи, що заперечують особистість, або психічне заганяння в кут, навіть якщо це не є тілесним покаранням. Переглянутий Посібник з учнівського керівництва рішуче попереджає про це.",
+                inappropriateGuidanceExamplesTitle: "Конкретні приклади неналежного керівництва:",
+                section2_1_boxItem1: "Емоційно кричати, приймати загрозливу позу, бити або кидати предмети.",
+                section2_1_boxItem2: "Керувати одноосібно на основі припущень, не підтвердивши думку учня чи ситуацію.",
+                section2_1_boxItem3: "Дії, що завдають шкоди приватності чи гідності, наприклад, наполегливе винесення догани конкретному учню перед іншими.",
+                section2_1_boxItem4: "Залишення учня наодинці після керівництва або нехтування необхідними подальшими діями чи контактом з батьками.",
+                section2_1_boxItem5: "Словесні образи, що заперечують особистість або саме існування учня, наприклад, 'Неважливо, чи ти тут, чи ні.'",
+                section2_1_boxItem6: "Ігнорування конкретного учня, навмисне приховування необхідної інформації, виявлення фаворитизму в оцінюванні чи керівництві.",
+                section2_1_boxItem7: "Призначення надмірно складних завдань і наполегливе звинувачення у нездатності їх виконати.",
+                section2_1_para2: "Навіть без видимих ран, ці дії залишають глибокі шрами в душі учня, повністю позбавляють їх впевненості та мотивації, <strong class=\"emphasis-red\">ускладнюють участь в освітній діяльності та ризикують призвести до найгірших наслідків</strong>.",
+                section2_2Title: "2. Трагедії, спричинені 'наміром керівництва' - Завжди з точки зору учня",
+                section2_2_para: "Дії, які вчитель вважає 'ентузіастичним керівництвом' або 'цілком природними', можуть бути нестерпним болем або тиском для учня. Вкрай важливо завжди запитувати себе і розмірковувати: <strong class=\"emphasis-red\">Чи є мій метод керівництва доцільним з об'єктивної точки зору? Як би він сприймався з позиції учня?</strong>",
+                section3Title: "Частина 3: Розуміння та запобігання домаганням - Захист відносин довіри",
+                section3_1Title: "1. Що таке домагання? - Обережність потрібна як на робочому місці, так і стосовно учнів",
+                section3_1_para: "Домагання загалом означають будь-яку поведінку, яка використовує перевагу в становищі чи стосунках для спричинення психічного/фізичного страждання або погіршення робочого/навчального середовища. Вони можуть відбуватися між викладачами/співробітниками та між вчителями та учнями.",
+                section3_1_item1: "<strong class=\"emphasis-red\">Сексуальні домагання:</strong> Небажані сексуальні слова чи дії. Непристойні розмови, непотрібний фізичний контакт, настирливі запрошення на обід чи побачення, поширення сексуальних чуток тощо. Включає спроби залишитися наодинці з учнем під приводом керівництва.",
+                section3_1_item2: "<strong class=\"emphasis-red\">Зловживання владою (Power Harassment):</strong> Знущання/переслідування з використанням службового становища чи повноважень. Словесні образи, що заперечують особистість, надмірні/мінімальні робочі накази, ігнорування/остракізм, примус до виконання особистих доручень тощо.",
+                section3_1_item3: "<strong class=\"emphasis-red\">Інші домагання:</strong> Існують різні форми, такі як домагання, пов'язані з вагітністю, гендерні домагання, академічні домагання тощо.",
+                section3_2Title: "2. Відповідальність за домагання та важливість усвідомлення",
+                section3_2_para1: "Залежно від змісту, домагання також можуть призвести до <strong class=\"emphasis-red\">кримінальних звинувачень, таких як розпусні дії або наклеп, цивільної відповідальності за збитки та дисциплінарного стягнення</strong>. Сексуальні домагання та зловживання владою є серйозними проблемами, які призводять до втрати довіри до всієї школи.",
+                section3_2_para2: "<strong class=\"emphasis-red\">Найкритичнішим моментом є те, що стандартом є 'як почувався отримувач'.</strong> Намір правопорушника — 'Я мав на увазі це як жарт,' 'Я думав, що це в межах керівництва' — не є виправданням. Якщо отримувач відчув дискомфорт і його гідність була принижена, це може становити домагання.",
+                warningBoxTitle: "Найважливіші питання, які вчителі повинні завжди пам'ятати - Сприймати це 'Особисто'",
+                warningBoxIntro: "Тілесні покарання, неналежне керівництво та домагання ніколи не є чужою проблемою. Усі викладачі та співробітники повинні ставитися до цього як до 'власної проблеми' та ретельно впроваджувати наступне у щоденній освітній діяльності:",
+                warningBoxKeyPoint1: "<strong class=\"emphasis-red\">Неухильне дотримання прав людини:</strong> Ставити повагу до особистості та прав людини кожного учня в основу всього керівництва та дій. Це основа всього.",
+                warningBoxKeyPoint2: "<strong class=\"emphasis-red\">Постійно усвідомлювати межу між 'керівництвом' та 'порушенням':</strong> Завжди критично самоперевіряйте, чи не виходять ваші слова та дії за рамки освітнього керівництва, чи не становлять вони порушення прав людини учнів або домагання. 'Це нормально' або 'Раніше це було дозволено' є неприйнятними.",
+                warningBoxKeyPoint3: "<strong class=\"emphasis-red\">Контроль емоцій (Управління гнівом):</strong> Коли відчуваєте труднощі в керівництві або відчуваєте гнів, ніколи не вдавайтеся до емоційних слів чи дій. Необхідно зробити паузу, порадитися з колегами — зусилля для збереження спокою.",
+                warningBoxKeyPoint4: "<strong class=\"emphasis-red\">Не нести тягар самотужки - Реагувати як 'Команда Школи':</strong> У складних випадках або коли не впевнені щодо керівництва, ніколи не приймайте рішення самостійно. Завжди повідомляйте/консультуйтеся з керівниками рівня, консультантами з учнівського керівництва, адміністрацією тощо, та розглядайте/впроваджуйте заходи як організація.",
+                warningBoxKeyPoint5: "<strong class=\"emphasis-red\">Ставлення до безперервного навчання:</strong> Відповідні закони, судова практика, Посібник з учнівського керівництва та суспільні цінності змінюються. Важливо постійно оновлювати знання через навчання тощо, та продовжувати переоцінювати власні погляди на керівництво та права людини.",
+                warningBoxKeyPoint6: "<strong class=\"emphasis-red\">Позбутися надмірної самовпевненості 'Зі мною все гаразд':</strong> Думка 'Зі мною цього не станеться' є найнебезпечнішою. Зберігайте скромне усвідомлення того, що будь-хто може стати учасником, і завжди приділяйте ретельну увагу.",
+                warningBoxConclusion: "<strong class=\"emphasis-red\">Викорінення цих проблем є найвищим пріоритетом школи. Адміністратори та викладачі повинні об'єднатися, створити відкрите робоче середовище, перевіряти один одного та прагнути до запобігання, раннього виявлення та швидкого реагування.</strong>",
+                sourceInfo: "Цей підсумок створено на основі наданого змісту лекції." // Ім'я видалено
+            }
+        };
+
+        // 言語切り替え関数 (修正)
+        function switchLanguage(lang) {
+            const defaultLang = 'ja'; // デフォルト言語を定義
+
+            // ページタイトル更新
+            const titleElement = document.querySelector('title[data-lang-key="pageTitle"]');
+            if (titleElement) {
+                titleElement.textContent = translations[lang]?.pageTitle || translations[defaultLang].pageTitle;
+            }
+
+            // data-lang-keyを持つ全要素のテキストを更新
+            document.querySelectorAll('[data-lang-key]').forEach(element => {
+                const key = element.getAttribute('data-lang-key');
+
+                // pageTitle は上で処理したのでスキップ
+                if (key === 'pageTitle') return;
+
+                 // lecturerInfo は削除したのでスキップ
+                 if (key === 'lecturerInfo') {
+                     element.textContent = ''; //念のため空にする
+                     return;
+                 }
+
+                // 特定のキー（例：事件例）はspan内にのみテキストを挿入
+                 if (element.classList.contains('case-example')) {
+                     element.textContent = translations[lang]?.[key] ?? translations[defaultLang]?.[key] ?? '';
+                     return; // この要素の処理は完了
+                 }
+
+                // 通常の要素の翻訳
+                let translation = translations[lang]?.[key] ?? translations[defaultLang]?.[key] ?? element.innerHTML;
+                element.innerHTML = translation;
+
+                // ネストされた事件例spanのテキストを再設定 (innerHTML書き換え後に再度行う)
+                const caseSpanCriminal = element.querySelector('span[data-lang-key="case1_criminal"]');
+                if (caseSpanCriminal) {
+                     caseSpanCriminal.textContent = translations[lang]?.case1_criminal ?? translations[defaultLang]?.case1_criminal ?? '';
+                }
+                 const caseSpanCivil = element.querySelector('span[data-lang-key="case1_civil"]');
+                if (caseSpanCivil) {
+                     caseSpanCivil.textContent = translations[lang]?.case1_civil ?? translations[defaultLang]?.case1_civil ?? '';
+                }
+            });
+
+            // HTML要素のlang属性を更新
+            document.documentElement.lang = lang;
+
+            // ボタンのアクティブ状態を更新
+            document.querySelectorAll('.lang-switcher button').forEach(button => {
+                button.classList.remove('active');
+            });
+            const activeButton = document.getElementById(`lang-${lang}`);
+            if (activeButton) {
+                activeButton.classList.add('active');
+            }
+        }
+
+        // ボタンにイベントリスナーを追加 (内容は変更なし)
+        document.getElementById('lang-ja').addEventListener('click', () => switchLanguage('ja'));
+        document.getElementById('lang-en').addEventListener('click', () => switchLanguage('en'));
+        document.getElementById('lang-fr').addEventListener('click', () => switchLanguage('fr'));
+        document.getElementById('lang-uk').addEventListener('click', () => switchLanguage('uk'));
+
+        // ページ読み込み時に初期言語を設定 (内容は変更なし)
+        document.addEventListener('DOMContentLoaded', () => {
+            const initialLang = document.documentElement.lang || 'ja';
+            switchLanguage(initialLang);
+            document.querySelectorAll('.lang-switcher button').forEach(button => {
+                 button.classList.remove('active');
+            });
+            const activeButton = document.getElementById(`lang-${initialLang}`);
+            if (activeButton) {
+                 activeButton.classList.add('active');
+            } else {
+                 document.getElementById('lang-ja')?.classList.add('active');
+            }
+        });
+    </script>
+</body>
+</html>
